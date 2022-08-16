@@ -5,14 +5,10 @@ call_user_func(
     function() {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'SYRADEV.RtSimpleosm',
+            'RtSimpleosm',
             'Sosm',
             [
-                'Osm' => 'displayMap'
-            ],
-            // non-cacheable actions
-            [
-                'Osm' => ''
+                \SYRADEV\RtSimpleosm\Controller\OsmController::class => 'displayMap'
             ]
         );
 
